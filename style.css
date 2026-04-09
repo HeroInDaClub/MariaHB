@@ -1,4 +1,4 @@
-*{
+html{
     background-color: rgba(255, 252, 225, 1);
     font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
@@ -43,7 +43,33 @@ h1{
   height: 100%;
   object-fit: cover;  /* Чтобы картинки не растягивались */
 }
-
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 20;          /* Выше, чем у слайдов */
+  pointer-events: auto; /* Чтобы кнопка была кликабельна */
+  width: 80%;
+  max-width: 600px;
+}
+.overlay-text h1{
+    font-size: 60px;
+    color: white;
+}
+.overlay-text p{
+    font-size: 40px;
+    color: white;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);  /* 0.5 = 50% яркости (затемнение) */
+}
 /* Для мобильных устройств */
 @media (max-width: 768px) {
   .swiper {
@@ -57,6 +83,14 @@ h1{
     h1{
     font-size: 35px;
     }
+    .overlay-text h1{
+    font-size: 40px;
+    color: white;
+}
+.overlay-text p{
+    font-size: 30px;
+    color: white;
+}
 }
 @media screen and (max-width:440px){
     a{
@@ -65,6 +99,14 @@ h1{
     h1{
     font-size: 30px;
     }
+    .overlay-text h1{
+    font-size: 30px;
+    color: white;
+}
+.overlay-text p{
+    font-size: 20px;
+    color: white;
+}
 }
 @media screen and (max-width:370px){
     a{
