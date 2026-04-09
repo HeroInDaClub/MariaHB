@@ -44,7 +44,7 @@ h1{
   object-fit: cover;  /* Чтобы картинки не растягивались */
 }
 .overlay-text {
-  margin-top: 60px;
+  margin-top: 90px;
   position: absolute;
   top: 50%;
   left: 50%;
